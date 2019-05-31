@@ -27,7 +27,7 @@ class Database:
         rows = [dict(row) for row in rows]  # Render as dict
         return rows
 
-    def create_response(self, projectName):
+    def create_json_response(self, projectName):
         """Create JSON response of records."""
         response = {
             'backlog': self.database_get_records(self.backlog_query, projectName),

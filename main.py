@@ -8,5 +8,5 @@ def main(request):
     """Entry point."""
     db = Database()
     projectName = request.args.get('project')
-    records = db.make_response(projectName)
+    records = db.create_json_response(projectName)
     return records
