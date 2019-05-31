@@ -7,5 +7,6 @@ from db import Database
 def main(request):
     """Entry point."""
     db = Database()
-    records = db.create_response()
+    projectName = request.args.get('project')
+    records = db.make_response(projectName)
     return records

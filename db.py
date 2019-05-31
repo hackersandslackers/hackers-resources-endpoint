@@ -19,19 +19,20 @@ class Database:
                                     connect_args={'sslmode': 'require'},
                                     echo=True)
 
-    def database_get_records(self, query):
+    def database_get_records(self, coreQuery, projectName):
         """Fetch records for backlog issues."""
+        query = coreQuery % (projectName)
         sql = text(query)  # SQL Query
         rows = self.engine.execute(sql)  # Get Rows
         rows = [dict(row) for row in rows]  # Render as dict
         return rows
 
-    def create_response(self):
+    def create_response(self, projectName):
         """Create JSON response of records."""
         response = {
-            'backlog': self.database_get_records(self.backlog_query),
-            'todo': self.database_get_records(self.todo_query),
-            'inprogress': self.database_get_records(self.inprogress_query),
-            'done': self.database_get_records(self.done_query),
+            'backlog': self.database_get_records(self.backlog_query, projectName),
+            'todo': self.database_get_records(self.todo_query, projectName),
+            'inprogress': self.database_get_records(self.inprogress_query, projectName),
+            'done': self.database_get_records(self.done_query, projectName),
         }
         return json.dumps(response)
