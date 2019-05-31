@@ -1,5 +1,5 @@
 """Initialize pulling Jira issues."""
-from flask import Flask, make_response, request
+from flask import Flask, make_response, request, jsonify
 from flask_cors import CORS
 from db import Database
 
@@ -9,4 +9,7 @@ def main(request):
     db = Database()
     projectName = request.args.get('project')
     records = db.create_json_response(projectName)
-    return records
+    response = jsonify(records)
+    response.headers.set('Access-Control-Allow-Origin', '*')
+    response.headers.set('Access-Control-Allow-Methods', 'GET, POST')
+    return response
