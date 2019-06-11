@@ -9,12 +9,12 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='Jira Issues Endpoint',
+    name='Jira Resources Endpoint',
     version='0.0.1',
     description='Pulls Jira issues for building kanban board.',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/hackersandslackers/jira-issues-endpoint',
+    url='https://github.com/hackersandslackers/hackers-resources-endpoint',
     author='Todd Birchard',
     author_email='toddbirchard@gmail.com',
     classifiers=[
@@ -33,7 +33,7 @@ setup(
         ],
     },
     project_urls={
-        'Bug Reports': 'https://github.com/hackersandslackers/jira-issues-endpoint/issues',
-        'Source': 'https://github.com/hackersandslackers/jira-issues-endpoint/',
+        'Bug Reports': 'https://github.com/hackersandslackers/hackers-resources-endpoint/issues',
+        'Source': 'https://github.com/hackersandslackers/hackers-resources-endpoint/',
     },
 )
