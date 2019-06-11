@@ -3,11 +3,10 @@ from flask import Flask, make_response, request, jsonify
 from db import Database
 
 
-def main(request):
+def main():
     """Entry point."""
-    db = Database()
-    projectName = request.args.get('project')
-    records = db.create_json_response(projectName)
+    db = Database(request)
+    records = db.create_json_response()
     response = jsonify(records)
     response.headers.set('Access-Control-Allow-Origin', '*')
     response.headers.set('Access-Control-Allow-Methods', 'GET, POST')
