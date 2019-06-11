@@ -5,7 +5,7 @@ from db import Database
 
 def main(request):
     """Entry point."""
-    db = Database(request)
+    db = Database()
     records = db.create_json_response()
     response = jsonify(records)
     response.headers.set('Access-Control-Allow-Origin', '*')
