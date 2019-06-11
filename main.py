@@ -1,6 +1,5 @@
 """Initialize pulling Jira issues."""
 from flask import Flask, make_response, request, jsonify
-from flask_cors import CORS
 from db import Database
 
 

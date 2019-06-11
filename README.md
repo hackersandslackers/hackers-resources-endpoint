@@ -1,4 +1,4 @@
-# Hackers Project Endpoint
+# Hackers Projects Endpoint
 
 ![Python](https://img.shields.io/badge/Python-v3.7-blue.svg?logo=python&longCache=true&logoColor=white&colorB=23a8e2&style=flat-square&colorA=36363e)
 ![Flask](https://img.shields.io/badge/Flask-v1.0.2-blue.svg?longCache=true&logo=python&style=flat-square&logoColor=white&colorB=23a8e2&colorA=36363e)
@@ -10,4 +10,4 @@
 [![GitHub Stars](https://img.shields.io/github/stars/hackersandslackers/jira-issues-endpoint.svg?style=flat-square&colorB=e3bb18&colorA=36363e&logo=Github)](https://github.com/hackersandslackers/jira-issues-endpoint/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/hackersandslackers/jira-issues-endpoint.svg?style=flat-square&colorA=36363e&logo=Github)](https://github.com/hackersandslackers/jira-issues-endpoint/network)
 
-Pulls Jira issues for building kanban board.
+Endpoint which serves Jira issues from a live JIRA Cloud instance. This endpoint is used to build an interactive kanban board widget on hackersandslackers.com.
